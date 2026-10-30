@@ -1,0 +1,12 @@
+{
+  "package": "websockets",
+  "version": "17.1",
+  "license": "BSD-3-Clause",
+  "wheel": "websockets-17.1-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+  "sha256": "0c863507ada5805517ca6dff1c524dcd42942efe6304dacf06700878398d21a6",
+  "upstream": "https://github.com/python-websockets/websockets",
+  "docs": "https://websockets.readthedocs.io/en/stable/reference/asyncio/server.html",
+  "scope": "Python steward transport only; not shipped as browser executable code",
+  "jose_source": "codiserver-server-v0.3.0/codiauth/jose.py",
+  "jose_sha256": "7464fc444355717cbee30a0eb4dcf788aa9419e6210702e799c7eb449db513ec"
+}

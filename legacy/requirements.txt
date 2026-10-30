@@ -1,0 +1,3 @@
+# Server-only dependencies. Visitors install nothing.
+cryptography==46.0.7
+websockets==17.1
