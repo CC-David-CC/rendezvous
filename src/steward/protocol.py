@@ -1,11 +1,8 @@
 """Signed public loopback rendezvous protocol; no account issuance or chat API."""
 import secrets
-import sys
-from pathlib import Path
 from .leases import Admission,LeaseRegistry,Unavailable
-# Reuse the unmodified pinned reference JOSE implementation, not custom crypto.
-sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'codiserver-server-v0.3.0'))
-from codiauth import jose
+# Reuse the public Accounts proof primitives.
+from webos_accounts import jose
 
 CHALLENGE='codi-steward-challenge/1'
 AUTH='codi-steward-auth/1'

@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import sys
 import unittest
-sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from steward.leases import Admission,LeaseRegistry,Unavailable
 
 class LeaseChecks(unittest.TestCase):
@@ -144,6 +144,4 @@ class LeaseChecks(unittest.TestCase):
   new=LeaseRegistry(frozenset([self.scope]),1600);self.assertEqual(0,new.snapshot()['leases'])
 
 if __name__=='__main__':
- suite=unittest.defaultTestLoader.loadTestsFromTestCase(LeaseChecks);result=unittest.TextTestRunner(verbosity=2).run(suite)
- receipt={'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'passed':result.wasSuccessful(),'scope':'Deterministic RAM lease state only; no WSS, identity or SDP validation evidence'}
- Path('.build/checks/steward-state.json').write_text(json.dumps(receipt,indent=2)+'\n');sys.exit(not result.wasSuccessful())
+ unittest.main(verbosity=2)

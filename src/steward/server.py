@@ -12,7 +12,7 @@ from .protocol import Protocol,jose,times,exact,identifier
 from .leases import LeaseRegistry,Unavailable
 from .provision import verified_seed
 from .publisher import PublisherFrozen,PublicChannelDirectory
-from origin_service.mount import validate_base_path
+from webos_accounts.mount import validate_base_path
 
 class AnonymousIntroductionsDisabled(Exception):
     pass
